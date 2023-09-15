@@ -1,0 +1,312 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+/* Styling the header and navigation bar */
+header {
+  background-color: #071952;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 30px 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+nav a:hover {
+  color: #c90f0f;
+}
+
+/* Styling the main content area */
+main {
+  padding: 80px;
+}
+
+/* Styling the footer */
+footer {
+  background-color: #35a29f;
+  color: #fff;
+  text-align: center;
+  padding: 25px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-size: 1.3rem;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer li {
+  margin: 0 15px;
+}
+
+footer a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+footer a:hover {
+  color: #c90f0f;
+}
+
+/*Main Section Animination*/
+
+/* Styling for the typewriter animation */
+.typewriter {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+  color: blue;
+  position: absolute; /* Position the text */
+  top: 50%; /* Move text vertically to the center */
+  left: 50%; /* Move text horizontally to the center */
+  transform: translate(-50%, -50%); /* Center text perfectly */
+
+  overflow: hidden;
+  white-space: wrap;
+  padding-bottom: 50px;
+}
+
+/* Media query for responsive design */
+@media (max-width: 550px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .typewriter {
+    font-size: 2.5rem;
+    padding-top: 150px;
+  }
+  main {
+    padding-top: 180px;
+  }
+}
+
+/* Media query for responsive design */
+@media (max-width: 768px) {
+  footer {
+    position: fixed;
+  }
+}
+
+/**********************************************************************************************/
+/************************ Expereience *********************************************************/
+/**********************************************************************************************/
+
+/* Flex container for experience sections */
+.experience-container {
+  margin-top: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Individual experience blocks */
+.experience-block {
+  max-width: 750px;
+  /* Adjusting the width as needed */
+  padding: 30px;
+  margin: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Styling for experience headers */
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Styling for job descriptions */
+.job-description {
+  margin-top: 10px;
+}
+
+/* Styling for job description list items */
+.job-description li {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+/**********************************************************************************************/
+/************************ Skills *********************************************************/
+/**********************************************************************************************/
+/* Styling for the skills container */
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(200px, 1fr)
+  ); /* Responsive columns */
+  gap: 20px; /* Gap between items */
+  max-width: 1000px; /* Centered container with a maximum width */
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Styling for each skill category */
+.skill-category {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.skill-category h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+/* Styling for each skill item */
+.skill-item {
+  margin: 10px;
+}
+
+.skill-item img {
+  width: 100px;
+  height: 100px;
+  display: block; /* Removing extra spacing below images */
+  margin: 0 auto; /* Center the image horizontally */
+}
+
+/* Centering the text within skill items */
+.skill-item h3 {
+  text-align: center;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .skills-container {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+
+  /* Adjusting font size for smaller screens */
+  .skill-category h2 {
+    font-size: 20px;
+  }
+}
+
+/**********************************************************************************************/
+/************************ Projects ************************************************************/
+/**********************************************************************************************/
+
+/* Styling for each project */
+.project {
+  margin-top: 40px;
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 20px; /* Adding margin between projects */
+
+  max-width: 1000px; /* Limit the content width */
+  margin: 30px auto; /* Center the content horizontally */
+}
+
+.project img {
+  max-width: 100%;
+  height: auto;
+  display: block; /* Removing extra spacing below images */
+  margin: 0 auto; /* Center the image horizontally */
+}
+
+.project h3 {
+  font-size: 24px;
+  margin: 10px 0;
+}
+
+.project p {
+  font-size: 16px;
+  padding: 20px;
+}
+.project ul {
+  padding: 20px;
+}
+
+/* Styling for the image gallery */
+.image-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns */
+  gap: 20px; /* Gap between images */
+  margin-top: 10px; /* Margin above the gallery */
+}
+
+.image-gallery img {
+  max-width: 100%;
+  height: 400px;
+  margin-bottom: 20px;
+}
+
+/*For responsive image*/
+/* Responsive design for smaller screens */
+@media (max-width: 1106px) {
+  .image-gallery {
+    grid-template-columns: repeat(3, 1fr); /* 2 columns on smaller screens */
+  }
+}
+@media (max-width: 800px) {
+  .image-gallery {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+  }
+}
+
+/* Further responsive design for even smaller screens */
+@media (max-width: 600px) {
+  .image-gallery {
+    grid-template-columns: 1fr; /* 1 column on even smaller screens */
+  }
+}
+
+/**********************************************************************************************/
+/************************ Others **************************************************************/
+/**********************************************************************************************/
+
+/* Style for the military background section */
+.military-background {
+  max-width: 1000px; /* Limiting the content width */
+  margin: 25px auto; /* Center the content horizontally */
+  padding: 30px;
+
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.military-background h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.military-background p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
